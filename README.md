@@ -65,8 +65,8 @@ Monthly summary/
 
 1. Clone the repository:
 
-git clone https://github.com/vinay26-git/HR-Leave-Automation.git
-cd HR-Leave-Automation
+ git clone https://github.com/vinay26-git/HR-Leave-Automation.git
+ cd HR-Leave-Automation
 
 2. Install dependencies:
 
