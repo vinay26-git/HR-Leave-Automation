@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-
 # --- Email Configuration ---
 # Fetches credentials and settings securely from the .env file
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
