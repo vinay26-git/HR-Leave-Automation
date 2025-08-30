@@ -96,6 +96,8 @@ python main.py
 
 ## Project Structure
 
+## Project Structure
+
 HR-Leave-Automation/
 ├─ Daily Approvals/
 │  ├─ .env
@@ -122,7 +124,6 @@ HR-Leave-Automation/
 │  └─ token.json
 │
 └─ README.md
-
 
 ---
 
