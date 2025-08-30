@@ -5,8 +5,6 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# --- Excel Configuration ---
-EXCEL_FILE_PATH = "quiddty.xlsx" # The name of your Excel file
 
 # --- Email Configuration ---
 # Fetches credentials and settings securely from the .env file
