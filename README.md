@@ -2,12 +2,12 @@
 
 Automates employee leave requests and notifications via email using Python. This project has two modules:
 
-1. **Daily Approvals** – Handles daily leave requests.
-2. **Monthly Summary** – Generates monthly leave summaries and reports.
+1. Daily Approvals – Handles daily leave requests.
+2. Monthly Summary – Generates monthly leave summaries and reports.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Submit leave requests via Google Sheets.
 - Automatically sends emails to HR and employees.
@@ -17,42 +17,122 @@ Automates employee leave requests and notifications via email using Python. This
 
 ---
 
-## 🛠 Prerequisites
+## Prerequisites
 
 Before running the project:
 
 1. Python 3.x installed.
-2. Required Python packages (see `requirements.txt` in each folder).
+2. Required Python packages (see requirements.txt in each folder).
 3. Google account with Google Sheets, Gmail, and Google Drive.
-4. Enable **Google Sheets API**, **Gmail API**, and **Google Drive API** in Google Cloud.
-5. Download the `.json` credentials file from Google Cloud and place it in the respective folder.
+4. Enable Google Sheets API, Gmail API, and Google Drive API in Google Cloud.
+5. Download the following credential files for each module and place them in the respective folders:
+
+Daily Approvals/
+    service-account-key.json
+    credentials.json
+    token.json
+
+Monthly summary/
+    service-account-key.json
+    credentials.json
+    token.json
 
 ---
 
-## 🔑 Setup Instructions
+## Setup Instructions
 
 ### 1. Generate App Password
-- Go to [Google App Passwords](https://myaccount.google.com/apppasswords)
-- Create a **16-character app password** for Gmail.
+- Go to https://myaccount.google.com/apppasswords
+- Create a 16-character app password for your Gmail account.
 - Keep it safe — it will be used for sending emails.
+- Add this in .env file along with your Email.
 
 ### 2. Google Sheets Setup
-- Create separate Google Sheets for **daily approvals** and **monthly summaries**.
-- Add the **Google Sheet ID** in the `google_sheet_handler.py` of each module.
+- Create separate Google Sheets for daily approvals and monthly summaries.
+- Add the Google Sheet ID in google_sheet_handler.py of each module.
 
 ### 3. Google Cloud Credentials
-- Enable **Sheets, Gmail, Drive APIs**.
-- Download the `.json` credentials file for each module.
-- Place it in the respective folder:
-  - `Daily Approvals/credentials.json`
-  - `Monthly summary/credentials.json`
+- Enable Sheets, Gmail, and Drive APIs.
+- Download service-account-key.json, credentials.json, and token.json for each module.
+- Place them in the respective folder:
+
+Daily Approvals/
+Monthly summary/
 
 ---
 
-## ⚡ Installation
+## Installation
 
 1. Clone the repository:
 
-```bash
 git clone https://github.com/vinay26-git/HR-Leave-Automation.git
 cd HR-Leave-Automation
+
+2. Install dependencies:
+
+# Daily Approvals
+cd "Daily Approvals"
+pip install -r requirements.txt
+
+# Monthly Summary
+cd "../Monthly summary"
+pip install -r requirements.txt
+
+---
+
+## Running the Project
+
+Daily Approvals:
+
+cd "Daily Approvals"
+python main.py
+
+Monthly Summary:
+
+cd "Monthly summary"
+python main.py
+
+---
+
+## Project Structure
+
+HR-Leave-Automation/
+├─ Daily Approvals/
+│  ├─ .env
+│  ├─ config.py
+│  ├─ email_sender.py
+│  ├─ google_sheet_handler.py
+│  ├─ leave_parser.py
+│  ├─ leave_request_handler.py
+│  ├─ main.py
+│  ├─ requirements.txt
+│  ├─ service-account-key.json
+│  ├─ credentials.json
+│  └─ token.json
+│
+├─ Monthly summary/
+│  ├─ .env
+│  ├─ config.py
+│  ├─ email_sender.py
+│  ├─ google_sheet_handler.py
+│  ├─ main.py
+│  ├─ requirements.txt
+│  ├─ service-account-key.json
+│  ├─ credentials.json
+│  └─ token.json
+│
+└─ README.md
+
+---
+
+## Notes
+
+- Do not commit .env or credential files to GitHub.
+- Keep .gitignore updated to exclude cache files (__pycache__/, *.pyc) and sensitive credentials.
+- Make sure Google Sheets and APIs are properly configured for your account before running the scripts.
+
+---
+
+## Contact
+
+For issues or feature requests, open a GitHub issue or contact [jejjari.vinay@gmail.com].
