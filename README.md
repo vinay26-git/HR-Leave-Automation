@@ -94,35 +94,6 @@ python main.py
 
 ---
 
-## Project Structure
-
-HR-Leave-Automation/
-├─ Daily Approvals/
-│ ├─ .env
-│ ├─ config.py
-│ ├─ email_sender.py
-│ ├─ google_sheet_handler.py
-│ ├─ leave_parser.py
-│ ├─ leave_request_handler.py
-│ ├─ main.py
-│ ├─ requirements.txt
-│ ├─ service-account-key.json
-│ ├─ credentials.json
-│ └─ token.json
-│
-├─ Monthly summary/
-│ ├─ .env
-│ ├─ config.py
-│ ├─ email_sender.py
-│ ├─ google_sheet_handler.py
-│ ├─ main.py
-│ ├─ requirements.txt
-│ ├─ service-account-key.json
-│ ├─ credentials.json
-│ └─ token.json
-│
-└─ README.md
----
 
 ## Notes
 
@@ -134,4 +105,4 @@ HR-Leave-Automation/
 
 ## Contact
 
-For issues or feature requests, open a GitHub issue or contact [jejjari.vinay@gmail.com].
+For issues or feature requests, open a GitHub issue or contact jejjari.vinay@gmail.com.
