@@ -70,11 +70,11 @@ cd HR-Leave-Automation
 
 2. Install dependencies:
 
-# Daily Approvals
+## Daily Approvals
 cd "Daily Approvals"
 pip install -r requirements.txt
 
-# Monthly Summary
+## Monthly Summary
 cd "../Monthly summary"
 pip install -r requirements.txt
 
