@@ -5,7 +5,7 @@ from datetime import datetime
 
 # --- Configuration ---
 SERVICE_ACCOUNT_FILE = 'service-account-key.json'
-GOOGLE_SHEET_NAME = 'Quiddty Sheet' 
+GOOGLE_SHEET_NAME = 'Add your Google Sheet Name' 
 
 def get_sheet_data():
     """
