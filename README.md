@@ -1,7 +1,4 @@
-d s aosdhvadsva
- cnacnna'c  
- zv
- z v
+HR Leave Automation is a Python-based system that streamlines employee leave management by automating daily approvals, email notifications, and monthly summaries. Integrated with Google Sheets, Gmail, and Google Drive, it simplifies HR workflows, reduces manual effort, and ensures accurate reporting.
 
 
 # HR Leave Automation
