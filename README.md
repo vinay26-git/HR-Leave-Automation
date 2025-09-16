@@ -18,7 +18,18 @@ Automates employee leave requests and notifications via email using Python. This
 - Uses Python for backend automation.
 
 ---
+## 📸 Screenshots  
 
+### Scrapy-AI in Action  
+ <img width="1344" height="557" alt="image" src=" ![WhatsApp Image 2025-09-16 at 20 20 14_4f266541](https://github.com/user-attachments/assets/262276e3-e6a6-48e3-818d-09b08634c26b)
+ " />
+
+
+ ### Website Example (Quiddity Engineering)  
+  <img width="1308" height="534" alt="image" src=" ![WhatsApp Image 2025-09-16 at 20 20 49_12323db1](https://github.com/user-attachments/assets/3e5cfe85-e181-4ebb-b48b-13ecea9f15b5)
+ " />
+
+---
 ## Prerequisites
 
 Before running the project:
