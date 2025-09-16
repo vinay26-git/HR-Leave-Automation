@@ -172,32 +172,38 @@ footer img {
 
 /* Header layout */
 header {
-  position: relative;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the text */
   padding: 20px;
   background-color: rgba(255,255,255,0.9);
+  position: relative;
 }
 
-/* Left corner icons */
-.header-left {
+/* Title centered */
+header h1 {
+  margin: 0;
+}
+
+/* Right corner icons */
+.header-right {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.header-left a {
-  margin-right: 15px;
+.header-right a {
+  margin-left: 15px;
   font-size: 28px;
   color: #333;
   transition: color 0.2s ease;
 }
 
-.header-left a:hover {
-  color: #0077b5; /* LinkedIn blue on hover */
+.header-right a:hover {
+  color: #0077b5; /* LinkedIn blue */
 }
 
-/* GitHub hover effect */
-.header-left a:first-child:hover {
+.header-right a:first-child:hover {
   color: #000; /* GitHub black */
 }
-
