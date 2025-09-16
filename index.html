@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Automation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to HR Leave Automation</h1>
+  </header>
+
+  <!-- Login Card -->
+  <section class="login-card" id="loginSection">
+    <h2>Login</h2>
+    <form onsubmit="return login(event)">
+      <input type="text" id="email" placeholder="Enter your email" required>
+      <input type="password" id="password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard" id="dashboard" style="display:none;">
+    <h2>Dashboard</h2>
+    <button onclick="runScript('daily')">
+      <i class="fas fa-calendar-check"></i> Daily Approvals
+    </button>
+    <button onclick="runScript('monthly')">
+      <i class="fas fa-chart-line"></i> Monthly Summary
+    </button>
+
+    <!-- Results will appear here -->
+    <div id="results" class="results"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo">
+      <p>
+        Contact me: Vinay (<a href="mailto:jejjari.vinay@gmail.com">jejjari.vinay@gmail.com</a>) | 
+        Revathi (<a href="mailto:revathivelisala@gmail.com">revathivelisala@gmail.com</a>)
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple login demo
+    function login(event) {
+      event.preventDefault();
+      document.getElementById("loginSection").style.display = "none";
+      document.getElementById("dashboard").style.display = "block";
+    }
+
+    // Run script via AJAX
+    async function runScript(scriptName) {
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '<p>Loading...</p>';
+
+      const formData = new FormData();
+      formData.append('script', scriptName);
+
+      try {
+        const response = await fetch('/run', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+          resultsDiv.innerHTML = `<p style="color:red;">Error: ${data.error}</p>`;
+        } else {
+          if(scriptName === 'daily') {
+            if(data.pending_requests && data.pending_requests.length > 0) {
+              let html = '<h3>Pending Approvals:</h3><ul>';
+              data.pending_requests.forEach(r => {
+                html += `<li>${r.employee} - ${r.request}</li>`;
+              });
+              html += '</ul>';
+              resultsDiv.innerHTML = html;
+            } else {
+              resultsDiv.innerHTML = '<p>No pending approvals.</p>';
+            }
+          } else if(scriptName === 'monthly') {
+            resultsDiv.innerHTML = `<pre>${data.output}</pre>`;
+          }
+        }
+      } catch (err) {
+        resultsDiv.innerHTML = `<p style="color:red;">Fetch error: ${err}</p>`;
+      }
+    }
+  </script>
+
+</body>
+</html>
