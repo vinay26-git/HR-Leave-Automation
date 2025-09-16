@@ -22,13 +22,44 @@ body::before {
 
 /* Header */
 header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center title */
   background: rgba(44, 62, 80, 0.85);
   color: white;
-  text-align: center;
   padding: 20px;
   border-bottom: 2px solid #1abc9c;
   font-size: 24px;
   font-weight: 600;
+  position: relative;
+}
+
+/* Title centered */
+header h1 {
+  margin: 0;
+}
+
+/* Right corner icons */
+.header-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-right a {
+  margin-left: 15px;
+  font-size: 28px;
+  color: white; /* icons white by default */
+  transition: color 0.2s ease;
+}
+
+.header-right a:hover {
+  color: #0077b5; /* LinkedIn blue for hover */
+}
+
+.header-right a:first-child:hover {
+  color: #000; /* GitHub black hover */
 }
 
 /* Login Card */
@@ -148,7 +179,7 @@ footer img {
   height: 24px;
 }
 
-
+/* Results */
 .results {
   margin-top: 20px;
   background: rgba(245, 246, 250, 0.9);
@@ -168,42 +199,4 @@ footer img {
 .results pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-}
-
-/* Header layout */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centers the text */
-  padding: 20px;
-  background-color: rgba(255,255,255,0.9);
-  position: relative;
-}
-
-/* Title centered */
-header h1 {
-  margin: 0;
-}
-
-/* Right corner icons */
-.header-right {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.header-right a {
-  margin-left: 15px;
-  font-size: 28px;
-  color: #333;
-  transition: color 0.2s ease;
-}
-
-.header-right a:hover {
-  color: #0077b5; /* LinkedIn blue */
-}
-
-.header-right a:first-child:hover {
-  color: #000; /* GitHub black */
 }
