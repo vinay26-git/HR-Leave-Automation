@@ -7,7 +7,7 @@ Automates employee leave requests and notifications via email using Python. This
 1. Daily Approvals – Handles daily leave requests.
 2. Monthly Summary – Generates monthly leave summaries and reports.
 
-🌐 **Live Demo:** [Scrapy-AI App](https://vinay26-git.github.io/HR-Leave-Automation/)
+🌐 **Live Demo:** [HR-Leave-Automation](https://vinay26-git.github.io/HR-Leave-Automation/)
 ---
 
 ## Features
