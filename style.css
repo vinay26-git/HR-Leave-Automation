@@ -169,3 +169,35 @@ footer img {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+/* Header layout */
+header {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.9);
+}
+
+/* Left corner icons */
+.header-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.header-left a {
+  margin-right: 15px;
+  font-size: 28px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.header-left a:hover {
+  color: #0077b5; /* LinkedIn blue on hover */
+}
+
+/* GitHub hover effect */
+.header-left a:first-child:hover {
+  color: #000; /* GitHub black */
+}
+
