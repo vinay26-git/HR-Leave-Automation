@@ -83,27 +83,27 @@ Monthly summary/
 
 2. Install dependencies:
 
-### Daily Approvals
-cd "Daily Approvals"
-pip install -r requirements.txt
+3.  Daily Approvals
+ cd "Daily Approvals"
+ pip install -r requirements.txt
 
-### Monthly Summary
-cd "../Monthly summary"
-pip install -r requirements.txt
+4. Monthly Summary
+ cd "../Monthly summary"
+ pip install -r requirements.txt
 
 ---
 
 ## Running the Project
 
-Daily Approvals:
+1.Daily Approvals:
 
-cd "Daily Approvals"
-python main.py
+ cd "Daily Approvals"
+ python main.py
 
-Monthly Summary:
+2.Monthly Summary:
 
-cd "Monthly summary"
-python main.py
+ cd "Monthly summary"
+ python main.py
 
 ---
 
