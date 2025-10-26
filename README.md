@@ -230,11 +230,7 @@ in your browser.
 
 | Login Page | Admin Dashboard | Employee Dashboard | Employee Leave Form |
 |-------------|----------------|---------------------|-----------------|
-| ![WhatsApp Image 2025-10-26 at 22 19 26_220baafe](https://github.com/user-attachments/assets/e17616a0-3693-484d-bafe-8efd672df3a5)
- | ![WhatsApp Image 2025-10-26 at 22 15 04_e78ac234](https://github.com/user-attachments/assets/cd425663-baa7-4b14-b5e1-268803f4ddcd)
- |![WhatsApp Image 2025-10-26 at 22 17 41_0b356336](https://github.com/user-attachments/assets/bb34a28d-e76d-40d4-b1d2-882ea86b4934)
- | ![WhatsApp Image 2025-10-26 at 22 16 36_28831be8](https://github.com/user-attachments/assets/5f453ce3-7d67-49e5-9a30-c4c4700cb71c) 
- |
+| ![WhatsApp Image 2025-10-26 at 22 19 26_220baafe](https://github.com/user-attachments/assets/e17616a0-3693-484d-bafe-8efd672df3a5)| ![WhatsApp Image 2025-10-26 at 22 15 04_e78ac234](https://github.com/user-attachments/assets/cd425663-baa7-4b14-b5e1-268803f4ddcd) |![WhatsApp Image 2025-10-26 at 22 17 41_0b356336](https://github.com/user-attachments/assets/bb34a28d-e76d-40d4-b1d2-882ea86b4934) | ![WhatsApp Image 2025-10-26 at 22 16 36_28831be8](https://github.com/user-attachments/assets/5f453ce3-7d67-49e5-9a30-c4c4700cb71c)|
 
 ---
 
