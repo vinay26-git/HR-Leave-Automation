@@ -91,7 +91,11 @@ It connects:
 
 ## 🧠 Architecture & Workflow
 
-```![Uploading ChatGPT Image Oct 26, 2025, 08_54_49 PM.png…]()
+ 
+ <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f4630c2e-5910-489c-8b4d-db7f901cd0aa" />
+
+
+```
 
 ```
 
