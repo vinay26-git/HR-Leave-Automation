@@ -91,10 +91,7 @@ It connects:
 
 ## 🧠 Architecture & Workflow
 
-```
  <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f4630c2e-5910-489c-8b4d-db7f901cd0aa" />
-
-```
 
 ---
 
@@ -226,7 +223,7 @@ in your browser.
 
 ---
 
-## 🖼️ Screenshots (Optional)
+## 🖼️ Screenshots
 
 | Login Page | Admin Dashboard | Employee Dashboard | Employee Leave Form |
 |-------------|----------------|---------------------|-----------------|
