@@ -20,9 +20,8 @@
 6. [Setup Instructions](#-setup-instructions)
 7. [Running the Application](#-running-the-application)
 8. [Screenshots](#-screenshots-optional)
-9. [Future Enhancements](#-future-enhancements)
-10. [License](#-license)
-11. [Contributors](#️-contributors)
+9. [Future Enhancements](#-future-enhancements
+10. [Contributors](#️-contributors)
 
 ---
 
@@ -93,16 +92,19 @@ It connects:
 ## 🧠 Architecture & Workflow
 
 ```mermaid
-flowchart TD
-    A[Employee] -->|Apply for Leave| B[Gmail API]
-    B --> C[Flask Backend (Daily Approvals)]
-    C -->|Approve/Reject| D[Google Sheets API]
-    D --> E[Update Leave Record]
-    C -->|Send Email| F[SMTP Server]
-    F --> A
-    G[Monthly Summary App] --> D
-    G -->|Generate Summary| H[Send Summary Emails]
-    HR[Admin] -->|View Logs & Summaries| C
+flowchart LR
+    A[Employee] --> B[Leave Request Email]
+    B --> C[Flask_Backend_Daily_Approvals]
+    C --> D[Google_Sheets_API]
+    C --> E[Gmail_API]
+    D --> F[Leave Records in Google Sheets]
+    E --> G[Email Responses]
+    C --> H[SQLite Database]
+    H --> I[Login & Role Management]
+    C --> J[Frontend (HTML/CSS/JS)]
+    J --> K[Admin Dashboard]
+    J --> L[Employee Dashboard]
+
 ```
 
 ---
