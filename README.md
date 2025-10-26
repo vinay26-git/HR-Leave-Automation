@@ -20,7 +20,7 @@
 6. [Setup Instructions](#-setup-instructions)
 7. [Running the Application](#-running-the-application)
 8. [Screenshots](#-screenshots-optional)
-9. [Future Enhancements](#-future-enhancements
+9. [Future Enhancements](#-future-enhancements)
 10. [Contributors](#️-contributors)
 
 ---
@@ -62,7 +62,7 @@ It connects:
 - Parses details (sender, type, dates).
 - Updates Google Sheets.
 - Sends formatted email replies (Approved/Rejected).
-- Marks as `Processed-Leave`.
+
 
 ### 📊 Monthly Summary Automation
 - Aggregates leave data from Google Sheets.
@@ -91,19 +91,7 @@ It connects:
 
 ## 🧠 Architecture & Workflow
 
-```mermaid
-flowchart LR
-    A[Employee] --> B[Leave Request Email]
-    B --> C[Flask_Backend_Daily_Approvals]
-    C --> D[Google_Sheets_API]
-    C --> E[Gmail_API]
-    D --> F[Leave Records in Google Sheets]
-    E --> G[Email Responses]
-    C --> H[SQLite Database]
-    H --> I[Login & Role Management]
-    C --> J[Frontend (HTML/CSS/JS)]
-    J --> K[Admin Dashboard]
-    J --> L[Employee Dashboard]
+```![Uploading ChatGPT Image Oct 26, 2025, 08_54_49 PM.png…]()
 
 ```
 
@@ -125,7 +113,7 @@ flowchart LR
 
 ```
 HR_LEAVE_AUTOMATION/
-├── hr_backend/
+├── Backend/
 │   ├── Daily Aprovels/
 │   │   ├── app.py
 │   │   ├── google_sheet_handler.py
@@ -148,10 +136,10 @@ HR_LEAVE_AUTOMATION/
 │       ├── service-account-key.json
 │       └── .env
 │
-├── hr_database/
+├── Database/
 │   └── setup_database.py
 │
-└── hr_frontend/
+└── Frontend/
     ├── assets/
     │   └── logo.png
     ├── login.html, dashboard.html, approvals.html, summary.html, logs.html, lookup.html, apply_leave.html
@@ -174,17 +162,12 @@ HR_LEAVE_AUTOMATION/
    - Choose *External*  
    - Add yourself as a Test User
 4. Create **OAuth 2.0 Client ID (Desktop App)**  
-   - Download `credentials.json` → place in `hr_backend/Daily Aprovels/`
+   - Download `credentials.json` → place in `Backend/Daily Aprovels/`
 5. Create a **Service Account (Project Editor Role)**  
    - Download `service-account-key.json` → copy to:
-     - `hr_backend/Daily Aprovels/`
-     - `hr_backend/Monthly summary/`
+     - `Backend/Daily Aprovels/`
+     - `Backend/Monthly summary/`
 6. Share your Google Sheet with the service account email (as **Editor**).
-7. Create Gmail label named **Processed-Leave**.
-
-📘 **Refer to Guides:**
-- `Setup Guide (for Personal @gmail.com Accounts).md`  
-- `Setup Guide (for Company or Office Accounts).md`
 
 ---
 
@@ -196,7 +179,7 @@ pip install Flask Flask-Cors pandas gspread google-api-python-client google-auth
 ```
 
 #### Create `.env` File
-In `hr_backend/Daily Aprovels/`:
+In `Backend/Daily Aprovels/`:
 
 ```
 SENDER_EMAIL=your-system-email@your-domain.com
@@ -205,16 +188,16 @@ SMTP_SERVER=smtp.gmail.com
 SMTP_PORT=465
 ```
 
-> Copy this same `.env` file into `hr_backend/Monthly summary/`.
+> Copy this same `.env` file into `Backend/Monthly summary/`.
 
 ---
 
 ### 🗃️ Part C: Database Setup
 ```bash
-cd hr_database
+cd Database
 python setup_database.py
 ```
-> This creates `users.db` in `hr_backend/Daily Aprovels/`.
+> This creates `users.db` in `Backend/Daily Aprovels/`.
 
 ---
 
@@ -222,21 +205,21 @@ python setup_database.py
 
 ### 1️⃣ Start Daily Approvals Backend
 ```bash
-cd hr_backend/Daily Aprovels
-python main.py
+cd Backend/Daily Aprovels
+python app.py
 ```
 > On first run, log in to your Gmail account when prompted (creates `token.json`).
 
 ### 2️⃣ Start Monthly Summary Backend
 ```bash
-cd hr_backend/Monthly summary
+cd Backend/Monthly summary
 python app.py
 ```
 
 ### 3️⃣ Open Frontend
 Launch:
 ```
-hr_frontend/login.html
+Frontend/login.html
 ```
 in your browser.
 
