@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Leave</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Apply for Leave</h1>
+        <p>Select dates for each leave type below. You can select multiple dates in each category.</p>
+
+        <div class="leave-form">
+            <div class="leave-category">
+                <label for="leave-reason">Reason for Leave</label>
+                <input type="text" id="leave-reason" placeholder="e.g., Personal work, Family function" required>
+            </div>
+            <div class="leave-category">
+                <label for="full-day-picker">Full Day Leave(s)</label>
+                <input type="text" id="full-day-picker" placeholder="Select dates...">
+            </div>
+
+            <div class="leave-category">
+                <label for="half-day-picker">Half Day Leave(s)</label>
+                <input type="text" id="half-day-picker" placeholder="Select dates...">
+            </div>
+
+            <div class="leave-category">
+                <label for="wfh-picker">Work From Home Day(s)</label>
+                <input type="text" id="wfh-picker" placeholder="Select dates...">
+            </div>
+
+            <div class="button-group" style="margin-top: 2rem;">
+                <button id="send-leave-request" class="btn btn-primary" style="width: auto;">Generate & Send Email</button>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem;"><a href="lookup.html">← Back to My Summary</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="apply_leave.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Summary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🗓️ Send Monthly Summaries</h1>
+
+        <div id="initial-view">
+            <p>Click the button below to start sending the leave summary emails for Current 2025 to all employees.</p>
+            <button id="start-summary-btn" class="btn btn-primary" style="width: auto;">Start Sending Summaries</button>
+        </div>
+
+        <div id="processing-view" style="display: none;">
+            <p>🚀 Sending emails to all employees... Please wait.</p>
+            <div class="loader"></div>
+            <p>This process may take a few moments to complete.</p>
+        </div>
+
+        <div id="completion-view" style="display: none;">
+            <div class="status-message success" id="completion-message">
+                </div>
+            
+            <div id="summary-results" class="request-details">
+                <div id="success-list-container">
+                    <h3>Successfully Sent To:</h3>
+                    <ul id="success-list">
+                        </ul>
+                </div>
+
+                <div id="failure-list-container" style="display: none; margin-top: 1.5rem;">
+                    <h3 style="color: var(--reject-color);">Failed to Send To:</h3>
+                    <ul id="failure-list">
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem;"><a href="dashboard.html">← Back to Dashboard</a></p>
+    </div>
+
+    <script src="summary.js"></script>
+</body>
+</html>

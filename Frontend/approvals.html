@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Approvals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Daily Leave Approvals</h1>
+
+        <div id="loading-view" style="display: none;">
+            <p>🔎 Searching for new leave requests...</p>
+            <div class="loader"></div>
+        </div>
+
+        <div id="pending-request-view" style="display: none;">
+            <p>A new leave request is pending. Please review and take action.</p>
+            <div class="request-card">
+                <div class="request-details">
+                    <p><span>From:</span> <span id="sender-email"></span></p>
+                    <p><span>Employee:</span> <span id="employee-name"></span></p>
+                    <p><span>Subject:</span> <span id="request-subject" style="font-weight: normal;"></span></p>
+                    <p><span>Request Details:</span></p>
+                    <ul id="request-details-list" style="list-style-position: inside; margin-left: 1rem;"></ul>
+                    <p style="margin-top: 1rem;"><span>Total:</span> <strong id="request-totals"></strong></p>
+                </div>
+
+                <div class="action-panel">
+                    <div class="note-section">
+                        <label for="admin-note">Add a Note:</label>
+                        <textarea id="admin-note" maxlength="200" placeholder="e.g., Please ensure handover is complete..."></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button id="reject-btn" class="btn btn-reject">Reject</button>
+                        <button id="approve-btn" class="btn btn-approve">Approve</button>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+        <div id="no-requests-view" style="display: none;">
+             <div class="status-message info" id="no-requests-message"></div>
+        </div>
+
+        <div id="success-view" style="display: none;">
+            <div class="status-message success" id="success-message"></div>
+            <button id="next-request-btn" class="btn btn-primary" style="margin-top: 1.5rem; width: auto;">Check for Next Request</button>
+        </div>
+
+        <div id="error-view" style="display: none;">
+            <div class="status-message" style="background-color: #f8d7da; color: #721c24; border-color: #f5c6cb;">
+                <strong>Error!</strong>
+                <p id="error-message" style="margin-top: 0.5rem; color: #721c24;">An error occurred.</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem;"><a href="dashboard.html">← Back to Dashboard</a></p>
+    </div>
+
+    <script src="approvals.js"></script>
+</body>
+</html>
