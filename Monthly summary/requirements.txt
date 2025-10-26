@@ -1,5 +1,0 @@
-pandas
-openpyxl
-python-dotenv
-gspread
-python-dateutil
