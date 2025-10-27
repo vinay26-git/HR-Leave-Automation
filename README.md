@@ -4,7 +4,6 @@
 ![Flask](https://img.shields.io/badge/Flask-Backend-black?logo=flask)
 ![Google-API](https://img.shields.io/badge/Google%20APIs-Gmail%20%7C%20Sheets%20%7C%20Drive-orange?logo=google)
 ![Database](https://img.shields.io/badge/Database-SQLite3-lightgrey?logo=sqlite)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
 > 🚀 **Automated HR Leave Management System** integrating Gmail and Google Sheets for leave request tracking, approvals, and monthly summaries — replacing manual workflows with a secure, role-based web app.
