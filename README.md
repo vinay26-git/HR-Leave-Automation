@@ -134,6 +134,7 @@ HR_LEAVE_AUTOMATION/
 │       └── .env
 │
 ├── Database/
+|   ├── users.db
 │   └── setup_database.py
 │
 └── Frontend/
