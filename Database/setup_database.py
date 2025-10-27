@@ -12,7 +12,7 @@ USERS_TO_ADD = [
       # Example for a 'vinay' employee user
 ]
 # This path points from hr_database up one level, then into the correct backend folder
-DATABASE_FILE = "../hr_backend/Daily Aprovels/users.db"
+DATABASE_FILE = "../Backend/Daily Aprovels/users.db"
 # --- End Configuration ---
 
 
@@ -65,5 +65,6 @@ for username, password, role in USERS_TO_ADD:
 
 conn.commit()
 conn.close()
+
 
 print("\nDatabase setup complete.")
