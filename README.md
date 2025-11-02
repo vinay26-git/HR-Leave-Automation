@@ -144,7 +144,7 @@ HR_LEAVE_AUTOMATION/
     │   └── logo.png
     ├── login.html, dashboard.html, approvals.html, summary.html, logs.html, lookup.html, apply_leave.html
     ├── style.css
-    └── login.js, dashboard.js, approvals.js, monthly_summary.js, logs.js, lookup.js, apply_leave.js
+    └── login.js, dashboard.js, approvals.js, summary.js, logs.js, lookup.js, apply_leave.js
 ```
 
 ---
