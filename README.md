@@ -105,7 +105,7 @@ It connects:
 | **Database** | SQLite3 with SHA-256 Password Hashing |
 | **APIs / Services** | Gmail API, Google Sheets API, Google Drive API |
 | **Libraries** | `google-api-python-client`, `google-auth-oauthlib`, `gspread`, `pandas`, `python-dotenv`, `dateparser` |
-
+| **DevOps**| Docker, Docker Compose|
 ---
 
 ## 🧱 Project Structure
@@ -246,5 +246,5 @@ in your browser.
 ## ❤️ Contributors
 **Developed by:** [VINAY JEJJARI]  
 📧 **Contact:** [jejjari.vinay@gmail.com]  
-🌐 **GitHub:** [https://github.com/vinay26-git]
+🌐 **GitHub:** [https://github.com/vinay26-git] 
 🐳 **Docker Hub:** [https://hub.docker.com/r/jejjari26/hr-leave-automation]
