@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  daily_approvals:
+    build: .
+    container_name: daily_approvals
+    working_dir: /app/Backend/Daily Aprovels
+    command: python app.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    env_file:
+      - Backend/Daily Aprovels/.env
+
+  monthly_summary:
+    build: .
+    container_name: monthly_summary
+    working_dir: /app/Backend/Monthly summary
+    command: python app.py
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/app
+    env_file:
+      - Backend/Monthly summary/.env
